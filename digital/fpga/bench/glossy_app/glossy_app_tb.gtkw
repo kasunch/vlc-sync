@@ -1,0 +1,108 @@
+[*]
+[*] GTKWave Analyzer v3.3.86 (w)1999-2017 BSI
+[*] Thu Apr 19 18:46:04 2018
+[*]
+[dumpfile] "/home/kasun/projects/vlc-sync/fpga/bench/glossy_app/glossy_app_tb-verilator.vcd"
+[dumpfile_mtime] "Thu Apr 19 18:45:40 2018"
+[dumpfile_size] 146102346
+[savefile] "/home/kasun/projects/vlc-sync/fpga/bench/glossy_app/glossy_app_tb.gtkw"
+[timestart] 0
+[size] 1855 1056
+[pos] -1 -1
+*-20.000000 1672000 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+[treeopen] TOP.
+[treeopen] TOP.glossy_app_tb.
+[treeopen] TOP.glossy_app_tb.app_ini.
+[treeopen] TOP.glossy_app_tb.app_ini.glossy_inst.
+[treeopen] TOP.glossy_app_tb.app_rcv.
+[treeopen] TOP.glossy_app_tb.app_rcv.glossy_inst.
+[sst_width] 259
+[signals_width] 329
+[sst_expanded] 1
+[sst_vpaned_height] 320
+@28
+TOP.glossy_app_tb.i_clk
+TOP.glossy_app_tb.w_auto_reset
+@200
+-
+@c00200
+-app_ini
+@28
+TOP.glossy_app_tb.app_ini.i_mode
+TOP.glossy_app_tb.app_ini.i_start
+TOP.glossy_app_tb.app_ini.o_sync_ind
+@1401200
+-app_ini
+@800200
+-glossy_ini
+@24
+TOP.glossy_app_tb.app_ini.glossy_inst.r_state[4:0]
+TOP.glossy_app_tb.app_ini.glossy_inst.r_t_cnt_clk[63:0]
+TOP.glossy_app_tb.app_ini.glossy_inst.r_t_cnt_stop[63:0]
+@28
+TOP.glossy_app_tb.app_ini.glossy_inst.w_stop_flag
+TOP.glossy_app_tb.app_ini.glossy_inst.i_start
+TOP.glossy_app_tb.app_ini.glossy_inst.o_done
+TOP.glossy_app_tb.app_ini.glossy_inst.r_tx_start
+TOP.glossy_app_tb.app_ini.glossy_inst.o_rx_sfd
+TOP.glossy_app_tb.app_ini.glossy_inst.o_tx_sfd
+@24
+TOP.glossy_app_tb.app_ini.glossy_inst.r_tx_cnt[7:0]
+@22
+TOP.glossy_app_tb.app_ini.glossy_inst.r_rx_cnt[7:0]
+@25
+TOP.glossy_app_tb.app_ini.glossy_inst.r_rl_cnt_rx[7:0]
+TOP.glossy_app_tb.app_ini.glossy_inst.r_rl_cnt_tx[7:0]
+@24
+TOP.glossy_app_tb.app_ini.glossy_inst.r_f_rl_cnt[7:0]
+TOP.glossy_app_tb.app_ini.glossy_inst.r_t_cnt_ref[63:0]
+@28
+TOP.glossy_app_tb.app_ini.glossy_inst.o_t_cnt_ref_updated
+@24
+TOP.glossy_app_tb.app_ini.glossy_inst.r_t_cnt_slot_sum[63:0]
+TOP.glossy_app_tb.app_ini.glossy_inst.r_n_slots[7:0]
+TOP.glossy_app_tb.app_ini.glossy_inst.o_t_cnt_ref[63:0]
+@1000200
+-glossy_ini
+@200
+-
+-
+@c00200
+-app_rcv
+@28
+TOP.glossy_app_tb.app_rcv.i_mode
+TOP.glossy_app_tb.app_rcv.i_start
+TOP.glossy_app_tb.app_rcv.o_sync_ind
+@1401200
+-app_rcv
+@800200
+-glossy_rcv
+@24
+TOP.glossy_app_tb.app_rcv.glossy_inst.r_state[4:0]
+TOP.glossy_app_tb.app_rcv.glossy_inst.r_t_cnt_clk[63:0]
+TOP.glossy_app_tb.app_rcv.glossy_inst.r_t_cnt_stop[63:0]
+TOP.glossy_app_tb.app_rcv.glossy_inst.r_t_cnt_rx_sfd[63:0]
+@28
+TOP.glossy_app_tb.app_rcv.glossy_inst.w_stop_flag
+TOP.glossy_app_tb.app_rcv.glossy_inst.i_start
+TOP.glossy_app_tb.app_rcv.glossy_inst.o_done
+TOP.glossy_app_tb.app_rcv.glossy_inst.r_tx_start
+TOP.glossy_app_tb.app_rcv.glossy_inst.o_rx_sfd
+TOP.glossy_app_tb.app_rcv.glossy_inst.o_tx_sfd
+@24
+TOP.glossy_app_tb.app_rcv.glossy_inst.r_tx_cnt[7:0]
+TOP.glossy_app_tb.app_rcv.glossy_inst.r_rx_cnt[7:0]
+TOP.glossy_app_tb.app_rcv.glossy_inst.r_rl_cnt_rx[7:0]
+TOP.glossy_app_tb.app_rcv.glossy_inst.r_rl_cnt_tx[7:0]
+TOP.glossy_app_tb.app_rcv.glossy_inst.r_f_rl_cnt[7:0]
+TOP.glossy_app_tb.app_rcv.glossy_inst.r_t_cnt_ref[63:0]
+@28
+TOP.glossy_app_tb.app_rcv.glossy_inst.r_t_cnt_ref_updated
+@24
+TOP.glossy_app_tb.app_rcv.glossy_inst.r_t_cnt_slot_sum[63:0]
+TOP.glossy_app_tb.app_rcv.glossy_inst.r_n_slots[7:0]
+TOP.glossy_app_tb.app_rcv.glossy_inst.o_t_cnt_ref[63:0]
+@1000200
+-glossy_rcv
+[pattern_trace] 1
+[pattern_trace] 0

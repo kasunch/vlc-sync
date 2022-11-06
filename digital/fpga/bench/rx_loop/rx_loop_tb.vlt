@@ -1,0 +1,3 @@
+`verilator_config
+lint_off -msg UNUSED -file "*/dft_top.v"
+lint_off -msg UNUSED -file "*/multfix.v"

@@ -1,0 +1,100 @@
+[*]
+[*] GTKWave Analyzer v3.3.86 (w)1999-2017 BSI
+[*] Sun Feb  4 23:17:45 2018
+[*]
+[dumpfile] "/home/kasun/projects/vlc-sync/fpga/bench/s2p-p2s/p2s_tb.vcd"
+[dumpfile_mtime] "Sun Feb  4 20:57:03 2018"
+[dumpfile_size] 21410
+[savefile] "/home/kasun/projects/vlc-sync/fpga/bench/s2p-p2s/p2s_tb.gtkw"
+[timestart] 374
+[size] 1863 1056
+[pos] -1 -1
+*-2.000000 265 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+[treeopen] p2s_tb.
+[sst_width] 225
+[signals_width] 273
+[sst_expanded] 1
+[sst_vpaned_height] 320
+@28
+p2s_tb.clk
+@200
+-
+@28
+p2s_tb.p2s_inst.reset
+p2s_tb.p2s_inst.i_start
+p2s_tb.p2s_inst.o_next_req
+@22
+p2s_tb.p2s_inst.r_cnt[7:0]
+@25
+p2s_tb.p2s_inst.Y[9:0]
+@c00200
+-p2s_in
+@24
+p2s_tb.X0[9:0]
+p2s_tb.X1[9:0]
+p2s_tb.X2[9:0]
+p2s_tb.X3[9:0]
+p2s_tb.X4[9:0]
+p2s_tb.X5[9:0]
+p2s_tb.X6[9:0]
+p2s_tb.X7[9:0]
+p2s_tb.X8[9:0]
+p2s_tb.X9[9:0]
+p2s_tb.X10[9:0]
+p2s_tb.X11[9:0]
+p2s_tb.X12[9:0]
+p2s_tb.X13[9:0]
+p2s_tb.X14[9:0]
+p2s_tb.X15[9:0]
+p2s_tb.X16[9:0]
+p2s_tb.X17[9:0]
+p2s_tb.X18[9:0]
+p2s_tb.X19[9:0]
+p2s_tb.X20[9:0]
+p2s_tb.X21[9:0]
+p2s_tb.X22[9:0]
+p2s_tb.X23[9:0]
+p2s_tb.X24[9:0]
+p2s_tb.X25[9:0]
+p2s_tb.X26[9:0]
+p2s_tb.X27[9:0]
+p2s_tb.X28[9:0]
+p2s_tb.X29[9:0]
+p2s_tb.X30[9:0]
+p2s_tb.X31[9:0]
+p2s_tb.X32[9:0]
+p2s_tb.X33[9:0]
+p2s_tb.X34[9:0]
+p2s_tb.X35[9:0]
+p2s_tb.X36[9:0]
+p2s_tb.X37[9:0]
+p2s_tb.X38[9:0]
+p2s_tb.X39[9:0]
+p2s_tb.X40[9:0]
+p2s_tb.X41[9:0]
+p2s_tb.X42[9:0]
+p2s_tb.X43[9:0]
+p2s_tb.X44[9:0]
+p2s_tb.X45[9:0]
+p2s_tb.X46[9:0]
+p2s_tb.X47[9:0]
+p2s_tb.X48[9:0]
+p2s_tb.X49[9:0]
+p2s_tb.X50[9:0]
+p2s_tb.X51[9:0]
+p2s_tb.X52[9:0]
+p2s_tb.X53[9:0]
+p2s_tb.X54[9:0]
+p2s_tb.X55[9:0]
+p2s_tb.X56[9:0]
+p2s_tb.X57[9:0]
+p2s_tb.X58[9:0]
+p2s_tb.X59[9:0]
+p2s_tb.X60[9:0]
+p2s_tb.X61[9:0]
+p2s_tb.X62[9:0]
+p2s_tb.X63[9:0]
+@1401200
+-p2s_in
+[pattern_trace] 1
+[pattern_trace] 0

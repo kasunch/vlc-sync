@@ -1,0 +1,85 @@
+TARGET = rx_tb
+
+all:	$(TARGET) 
+
+### C++ source files
+SOURCES = rx_tb.cpp
+### C++ source files search directories
+SOURCE_DIRS = .
+
+### Testbench verilog file
+RTL_TB_SOURCE = rx_tb.v
+
+### Verilog files search directories
+RTL_SOURCE_DIRS = . ../../rtl /usr/local/share/verilator/include
+### Verilog other files
+RTL_SOURCES = rx.v s_to_p.v dft_top.v cmplx_to_mag.v sym_dec.v min_avg.v
+
+
+VERILATOR_DEFINES = __VERILATOR__
+CCX_DEFINES =
+
+# Followings are located in the verilator include directory
+SOURCES += verilated.cpp verilated_vcd_c.cpp
+
+OBJECT_DIR = obj_dir
+VERILATOR_OBJECT_DIR = obj_dir_v
+VERILATOR_CFG_FILE = $(TARGET).vlt
+
+CXX = g++
+CXXFLAGS += ${addprefix -D, $(CCX_DEFINES)} -Os -Wall -fmessage-length=0
+
+VERILATOR = verilator 
+VERILATOR_CFLAGS += -Wall -Wno-PINMISSING -Wno-PINCONNECTEMPTY -Wno-DECLFILENAME --unroll-count 128
+VERILATOR_CFLAGS += -cc --trace ${addprefix -D, $(VERILATOR_DEFINES)}
+VERILATOR_CFLAGS += ${addprefix -I, $(RTL_SOURCE_DIRS)} 
+VERILATOR_ROOT ?= $(shell bash -c '$(VERILATOR) -V | grep VERILATOR_ROOT | head -1 | sed -e " s/^.*=\s*//"')
+
+### Directories for temporary C++ and object files 
+ifeq (${wildcard $(OBJECT_DIR)},)
+ 	DUMMY := ${shell mkdir $(OBJECT_DIR)}
+endif
+
+ifeq (${wildcard $(VERILATOR_OBJECT_DIR)},)
+ 	DUMMY := ${shell mkdir $(VERILATOR_OBJECT_DIR)}
+endif
+
+o_name_cxx = ${patsubst %.cpp, %.o, $(1)}
+rtl_lib_name = ${patsubst %.v, V%__ALL.a, $(1)}
+
+OBJECT_FILES = ${addprefix $(OBJECT_DIR)/,${call o_name_cxx, $(SOURCES)}}
+TB_LIB_FILES = ${addprefix $(VERILATOR_OBJECT_DIR)/,${call rtl_lib_name, $(RTL_TB_SOURCE)}}
+
+SOURCE_DIRS += $(VERILATOR_ROOT)/include
+
+INCLUDES += ${addprefix -I, $(VERILATOR_ROOT)/include}
+INCLUDES += ${addprefix -I, $(VERILATOR_OBJECT_DIR)}
+
+vpath %.cpp $(SOURCE_DIRS)
+vpath %.v $(RTL_SOURCE_DIRS)
+
+### Automatic dependency generation
+### See http://make.paulandlesley.org/autodep.html
+-include ${addprefix $(OBJECT_DIR)/,$(SOURCES:.cpp=.d)}
+
+	
+$(TARGET):	$(OBJECT_FILES) $(TB_LIB_FILES)
+	$(CXX) $(LDFLAGS) $(OBJECT_FILES) $(TB_LIB_FILES) -o $@
+
+$(VERILATOR_OBJECT_DIR)/V%.mk: %.v $(RTL_SOURCES)	
+	@echo "============================ Verilating $< ============================"
+	$(VERILATOR) $(VERILATOR_CFLAGS) --Mdir $(VERILATOR_OBJECT_DIR) $(VERILATOR_CFG_FILE) $<
+	
+$(VERILATOR_OBJECT_DIR)/V%__ALL.a: $(VERILATOR_OBJECT_DIR)/V%.mk	
+	$(MAKE) -C $(VERILATOR_OBJECT_DIR) -f V$*.mk
+
+$(OBJECT_DIR)/%.o:	%.cpp $(TB_LIB_FILES)
+	$(CXX) $(CXXFLAGS) $(INCLUDES) -c -MMD $< -o $@
+
+clean:
+	rm -rf $(OBJECT_DIR) $(VERILATOR_OBJECT_DIR) $(TARGET)-verilator.vcd $(TARGET) output*$(TARGET).*
+	
+run: $(TARGET)
+	./$(TARGET)
+	
+.PRECIOUS: $(VERILATOR_OBJECT_DIR)/V%.mk

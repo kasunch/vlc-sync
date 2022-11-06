@@ -1,0 +1,34 @@
+TARGET = s2p_tb
+
+### Testbench verilog file
+RTL_TB_SOURCE = s2p_tb.v
+
+### Verilog files search directories
+RTL_SOURCE_DIRS = . ../../rtl
+### Verilog other files
+RTL_SOURCES = s_to_p.v
+
+DEFINES = 
+
+IVERILOG_INCLUDES += ${addprefix -I, $(RTL_SOURCE_DIRS)}
+IVERILOG_MODULES += ${addprefix -y, $(RTL_SOURCE_DIRS)}
+CFLAGS += ${addprefix -D, $(DEFINES)}
+
+vpath %.v $(RTL_SOURCE_DIRS)
+
+# Icarus Verilog compiler
+IVERILOG = iverilog
+# Icarus Verilog vvp runtime engine
+VVP = vvp
+
+all: $(TARGET) 
+	
+$(TARGET): $(RTL_TB_SOURCE) $(RTL_SOURCES)
+	$(IVERILOG) $(IVERILOG_INCLUDES) $(CFLAGS) $(IVERILOG_MODULES) $(RTL_TB_SOURCE) -o $@
+
+clean:
+	rm -rf $(TARGET)
+	
+run: $(TARGET)
+	$(VVP) $(TARGET)
+	

@@ -1,0 +1,88 @@
+[*]
+[*] GTKWave Analyzer v3.3.86 (w)1999-2017 BSI
+[*] Tue Feb  6 21:45:16 2018
+[*]
+[dumpfile] "/home/kasun/projects/vlc-sync/fpga/bench/s2p-p2s/s2p_tb.vcd"
+[dumpfile_mtime] "Tue Feb  6 21:20:32 2018"
+[dumpfile_size] 70071
+[savefile] "/home/kasun/projects/vlc-sync/fpga/bench/s2p-p2s/s2p_tb.gtkw"
+[timestart] 27
+[size] 1863 1176
+[pos] -1 -1
+*-3.908379 31 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+[treeopen] s2p_tb.
+[sst_width] 225
+[signals_width] 179
+[sst_expanded] 1
+[sst_vpaned_height] 409
+@28
+s2p_tb.clk
+s2p_tb.w_auto_reset
+@22
+s2p_tb.w_in[9:0]
+s2p_tb.Y0[9:0]
+s2p_tb.Y1[9:0]
+s2p_tb.Y2[9:0]
+s2p_tb.Y3[9:0]
+s2p_tb.Y4[9:0]
+s2p_tb.Y5[9:0]
+s2p_tb.Y6[9:0]
+s2p_tb.Y7[9:0]
+s2p_tb.Y8[9:0]
+s2p_tb.Y9[9:0]
+s2p_tb.Y10[9:0]
+s2p_tb.Y11[9:0]
+s2p_tb.Y12[9:0]
+s2p_tb.Y13[9:0]
+s2p_tb.Y14[9:0]
+s2p_tb.Y15[9:0]
+s2p_tb.Y16[9:0]
+s2p_tb.Y17[9:0]
+s2p_tb.Y18[9:0]
+s2p_tb.Y19[9:0]
+s2p_tb.Y20[9:0]
+s2p_tb.Y21[9:0]
+s2p_tb.Y22[9:0]
+s2p_tb.Y23[9:0]
+s2p_tb.Y24[9:0]
+s2p_tb.Y25[9:0]
+s2p_tb.Y26[9:0]
+s2p_tb.Y27[9:0]
+s2p_tb.Y28[9:0]
+s2p_tb.Y29[9:0]
+s2p_tb.Y30[9:0]
+s2p_tb.Y31[9:0]
+s2p_tb.Y32[9:0]
+s2p_tb.Y33[9:0]
+s2p_tb.Y34[9:0]
+s2p_tb.Y35[9:0]
+s2p_tb.Y36[9:0]
+s2p_tb.Y37[9:0]
+s2p_tb.Y38[9:0]
+s2p_tb.Y39[9:0]
+s2p_tb.Y40[9:0]
+s2p_tb.Y41[9:0]
+s2p_tb.Y42[9:0]
+s2p_tb.Y43[9:0]
+s2p_tb.Y44[9:0]
+s2p_tb.Y45[9:0]
+s2p_tb.Y46[9:0]
+s2p_tb.Y47[9:0]
+s2p_tb.Y48[9:0]
+s2p_tb.Y49[9:0]
+s2p_tb.Y50[9:0]
+s2p_tb.Y51[9:0]
+s2p_tb.Y52[9:0]
+s2p_tb.Y53[9:0]
+s2p_tb.Y54[9:0]
+s2p_tb.Y55[9:0]
+s2p_tb.Y56[9:0]
+s2p_tb.Y57[9:0]
+s2p_tb.Y58[9:0]
+s2p_tb.Y59[9:0]
+s2p_tb.Y60[9:0]
+s2p_tb.Y61[9:0]
+s2p_tb.Y62[9:0]
+s2p_tb.Y63[9:0]
+[pattern_trace] 1
+[pattern_trace] 0

@@ -1,0 +1,31 @@
+TARGET = clk_div_tb
+
+### Testbench verilog file
+RTL_TB_SOURCE = clk_div_tb.v
+
+### Verilog files search directories
+RTL_SOURCE_DIRS = ../../rtl
+### Verilog other files
+RTL_SOURCES = 
+
+IVERILOG_INCLUDES += ${addprefix -I, $(RTL_SOURCE_DIRS)}
+IVERILOG_MODULES += ${addprefix -y, $(RTL_SOURCE_DIRS)}
+
+vpath %.v $(RTL_SOURCE_DIRS)
+
+# Icarus Verilog compiler
+IVERILOG = iverilog
+# Icarus Verilog vvp runtime engine
+VVP = vvp
+
+all: $(TARGET) 
+	
+$(TARGET): $(RTL_TB_SOURCE) $(RTL_SOURCES)
+	$(IVERILOG) $(IVERILOG_INCLUDES) $(IVERILOG_MODULES) $(RTL_TB_SOURCE) -o $@
+
+clean:
+	rm -rf $(TARGET) $(TARGET).vcd output*$(TARGET).hex
+	
+run: $(TARGET)
+	$(VVP) $(TARGET)
+	

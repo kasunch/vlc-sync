@@ -1,0 +1,13 @@
+`verilator_config
+lint_off -msg UNUSED -file "*/addfxp.v"
+lint_off -msg UNUSED -file "*/dft_top.v"
+lint_off -msg UNUSED -file "*/idft_top.v"
+lint_off -msg UNUSED -file "*/multfix.v"
+lint_off -msg UNUSED -file "*/shiftRegFIFO.v"
+lint_off -msg UNUSED -file "*/subfxp.v"
+tracing_off -file "*/addfxp.v"
+tracing_off -file "*/dft_top.v"
+tracing_off -file "*/idft_top.v"
+tracing_off -file "*/multfix.v"
+tracing_off -file "*/shiftRegFIFO.v"
+tracing_off -file "*/subfxp.v"
